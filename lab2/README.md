@@ -24,11 +24,18 @@ mvn clean package
 
 ## Run the Application
 
-To run the Spring Boot application, use the following command:
+To run the Spring Boot application as executable jar file, use the following command:
 
 ```
 java -jar target/lab2-1.0.0.jar
 ```
+
+To run the Spring Boot application with mvn plugin (mvn package not required)
+```
+mvn spring-boot:run
+```
+
+
 
 ## To test the book collection API
 ```

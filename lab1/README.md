@@ -31,6 +31,11 @@ To run the Spring Boot application, use the following command:
 java -jar target/lab1-1.0.0.jar
 ```
 
+To run the Spring Boot application with mvn plugin (mvn package not required)
+```
+mvn spring-boot:run
+```
+
 ## To test the book collection API
 ```
 curl http://localhost:8080/api/v1/books -v
