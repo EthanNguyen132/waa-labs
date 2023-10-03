@@ -1,0 +1,12 @@
+### Index
+GET localhost:8080
+
+### Product list
+GET localhost:8080/product
+
+### Product details with @RequestParam
+GET localhost:8080/getProduct?productId=2
+
+### Product details with @PathVariable
+GET localhost:8080/product/3
+
