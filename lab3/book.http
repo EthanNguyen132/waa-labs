@@ -1,0 +1,54 @@
+GET http://localhost:8080/books
+
+###
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+    "id": 4,
+    "title": "Spring for dummy"
+}
+
+###
+GET http://localhost:8080/books/4
+
+###
+PUT http://localhost:8080/books/4
+Content-Type: application/json
+
+{
+  "id": 4,
+  "title": "Spring for dummy 2nd edition"
+}
+
+###
+DELETE http://localhost:8080/books/4
+
+
+###
+GET http://localhost:8080/books
+X-Version: 1
+
+###
+GET http://localhost:8080/books
+X-Version: 2
+
+###
+GET http://localhost:8080/books
+Accept: application/cs.miu.edu-v1+json
+
+###
+GET http://localhost:8080/books
+Accept: application/cs.miu.edu-v2+json
+
+###
+GET http://localhost:8080/books?version=1
+
+###
+GET http://localhost:8080/books?version=2
+
+###
+GET http://localhost:8080/v1/books
+
+###
+GET http://localhost:8080/v2/books

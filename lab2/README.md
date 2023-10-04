@@ -13,7 +13,6 @@ Before you begin, ensure you have the following installed:
 - Java Development Kit (JDK)
 - Apache Maven
 
-
 ## Build the Application
 
 To build the Spring Boot application and create a JAR file, run the following Maven command in the project directory:
