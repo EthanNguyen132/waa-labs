@@ -1,0 +1,126 @@
+POST localhost:8080/customers
+Content-Type: application/json
+
+{
+  "firstname": "Join",
+  "lastname": "Smith",
+  "orders": [
+    {
+      "date": "2019-01-01",
+      "orderlines": [
+        {
+          "product": {
+            "name": "Apple",
+            "description": "Macbook Pro"
+          },
+          "quantity": 3
+        },
+        {
+          "product": {
+            "name": "Orange",
+            "description": "Orange Juice Bottle"
+          },
+          "quantity": 5
+        }
+      ]
+    }
+  ]
+}
+
+###
+GET localhost:8080/customers/1
+
+###
+PUT localhost:8080/customers/1/orders
+Content-Type: application/json
+
+{
+  "date": "2019-01-01",
+  "orderlines": [
+    {
+      "product": {
+        "name": "Huge Apple",
+        "description": "Macbook Pro 16 inches"
+      },
+      "quantity": 3
+    },
+    {
+      "product": {
+        "name": "Big Orange",
+        "description": "Orange Juice Bottle 2 Gallons"
+      },
+      "quantity": 5
+    }
+  ]
+}
+
+###
+POST localhost:8080/customers/1/orders
+Content-Type: application/json
+
+{
+  "date": "2023-01-01",
+  "orderlines": [
+    {
+      "product": {
+        "id": 3,
+        "name": "Huge Apple",
+        "description": "Macbook Pro 16 inches"
+      },
+      "quantity": 3
+    },
+    {
+      "product": {
+        "id": 4,
+        "name": "Big Orange",
+        "description": "Orange Juice Bottle 2 Gallons"
+      },
+      "quantity": 5
+    }
+  ]
+}
+
+###
+GET localhost:8080/customers/1
+
+###
+DELETE localhost:8080/customers/1/orders/3
+
+###
+DELETE localhost:8080/orders/2
+
+###
+GET localhost:8080/customers/1
+
+## attempt to add order with book
+###
+POST localhost:8080/customers
+Content-Type: application/json
+
+{
+  "firstname": "Join",
+  "lastname": "Smith",
+  "orders": [
+    {
+      "date": "2019-01-01",
+      "orderlines": [
+        {
+          "product": {
+            "artist": "Wham",
+            "name": "Last Christmas",
+            "description": "A Christmas song"
+          },
+          "quantity": 3
+        },
+        {
+          "product": {
+            "title": "Spring in Action",
+            "name": "Spring in Action 6th Edition",
+            "description": "Spring in Action 6th Edition"
+          },
+          "quantity": 5
+        }
+      ]
+    }
+  ]
+}

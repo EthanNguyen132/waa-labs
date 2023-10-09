@@ -1,0 +1,25 @@
+POST localhost:8080/appointments
+Content-Type: application/json
+
+{
+  "appdate": "Join",
+  "patient": {
+    "name": "John Doe",
+    "street": "100 Main Street",
+    "zip": "Boston",
+    "city": "23114"
+  },
+  "doctor": {
+    "doctortype": "Eye doctor",
+    "firstname": "Frank",
+    "lastname": "Brown"
+  },
+  "payment": {
+    "paydate": "2024-01-01",
+    "amount": 100.00
+  }
+}
+
+###
+GET localhost:8080/appointments/1
+
