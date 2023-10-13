@@ -1,0 +1,44 @@
+### get books as user
+GET localhost:8080/books
+Authorization: Basic john@miu.edu 123456
+
+### Add book as user
+POST localhost:8080/books
+Content-Type: application/json
+Authorization: Basic john@miu.edu 123456
+
+{
+  "title": "Spring Security 6 from zero to hero"
+}
+
+### Add book as admin
+POST localhost:8080/books
+Content-Type: application/json
+Authorization: Basic admin@miu.edu 123456
+
+{
+  "title": "Spring Security 6 from zero to hero"
+}
+
+### Add book as admin 2
+POST localhost:8080/books
+Content-Type: application/json
+Authorization: Basic admin@miu.edu 123456
+
+{
+  "title": "Spring Webflux from zero to hero"
+}
+
+###  Update book as admin
+PUT localhost:8080/books/10
+Content-Type: application/json
+Authorization: Basic admin@miu.edu 123456
+
+{
+  "id": 1,
+  "title": "Spring Security 6 for dummies"
+}
+
+### Delete book as admin
+DELETE localhost:8080/books/2
+Authorization: Basic admin@miu.edu 123456

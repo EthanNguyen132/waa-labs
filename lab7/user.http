@@ -1,0 +1,36 @@
+## Register admin user
+POST localhost:8080/users
+Content-Type: application/json
+
+{
+  "email": "admin@miu.edu",
+  "password": "123456",
+  "roles": [
+    "ROLE_ADMIN",
+    "ROLE_USER"
+  ]
+}
+
+### Register normal user
+POST localhost:8080/users
+Content-Type: application/json
+
+{
+  "email": "john@miu.edu",
+  "password": "123456",
+  "roles": [
+    "ROLE_USER"
+  ]
+}
+
+### Get all users
+GET localhost:8080/users
+
+### get admin authentication
+# @no-cookie-jar
+GET localhost:8080/users/authentication
+Authorization: Basic admin@miu.edu 123456
+
+### get user authentication
+GET localhost:8080/users/authentication
+Authorization: Basic join@miu.edu 123456
