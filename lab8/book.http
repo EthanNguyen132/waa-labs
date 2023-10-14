@@ -1,0 +1,45 @@
+### get books as user
+GET localhost:8080/books
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyLHVzZXJAbWl1LmVkdSIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpc3MiOiJlZHUvbWl1L3dhYS9sYWI4IiwiaWF0IjoxNjk3MzA5ODQ1LCJleHAiOjE2OTczMTM0NDV9.0aeV54LlAcD8hMEljnxzRweEKcexLPaZQxmdCtgtduY5mHi3lQDO3ayRuL09hFZkCVF7N0zDlZzwiyIbU36OHA
+
+### Add book as user - should be forbidden
+POST localhost:8080/books
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyLHVzZXJAbWl1LmVkdSIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpc3MiOiJlZHUvbWl1L3dhYS9sYWI4IiwiaWF0IjoxNjk3MzA5ODQ1LCJleHAiOjE2OTczMTM0NDV9.0aeV54LlAcD8hMEljnxzRweEKcexLPaZQxmdCtgtduY5mHi3lQDO3ayRuL09hFZkCVF7N0zDlZzwiyIbU36OHA
+
+{
+  "title": "Spring Security 6 from zero to hero"
+}
+
+### Add book as admin
+POST localhost:8080/books
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLGFkbWluQG1pdS5lZHUiLCJyb2xlcyI6WyJST0xFX0FETUlOIl0sImlzcyI6ImVkdS9taXUvd2FhL2xhYjgiLCJpYXQiOjE2OTczMDk4NzksImV4cCI6MTY5NzMxMzQ3OX0.UVya0HkuwQ24nigXE_GhhVgXyLYqHRPPD_Z_Sft35hOJQiaEZvmhD2oiYbHli2cZ0zH3Rkkvmphh60p2JI3h8g
+
+{
+  "title": "Spring Security 6 from zero to hero"
+}
+
+### Add book as admin 2
+POST localhost:8080/books
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLGFkbWluQG1pdS5lZHUiLCJyb2xlcyI6WyJST0xFX0FETUlOIl0sImlzcyI6ImVkdS9taXUvd2FhL2xhYjgiLCJpYXQiOjE2OTczMDk4NzksImV4cCI6MTY5NzMxMzQ3OX0.UVya0HkuwQ24nigXE_GhhVgXyLYqHRPPD_Z_Sft35hOJQiaEZvmhD2oiYbHli2cZ0zH3Rkkvmphh60p2JI3h8g
+
+{
+  "title": "Spring Webflux from zero to hero"
+}
+
+###  Update book as admin
+PUT localhost:8080/books/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLGFkbWluQG1pdS5lZHUiLCJyb2xlcyI6WyJST0xFX0FETUlOIl0sImlzcyI6ImVkdS9taXUvd2FhL2xhYjgiLCJpYXQiOjE2OTczMDk4NzksImV4cCI6MTY5NzMxMzQ3OX0.UVya0HkuwQ24nigXE_GhhVgXyLYqHRPPD_Z_Sft35hOJQiaEZvmhD2oiYbHli2cZ0zH3Rkkvmphh60p2JI3h8g
+
+{
+  "id": 1,
+  "title": "Spring Security 6 for dummies"
+}
+
+### Delete book as admin
+DELETE localhost:8080/books/6
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxLGFkbWluQG1pdS5lZHUiLCJyb2xlcyI6WyJST0xFX0FETUlOIl0sImlzcyI6ImVkdS9taXUvd2FhL2xhYjgiLCJpYXQiOjE2OTczMDk4NzksImV4cCI6MTY5NzMxMzQ3OX0.UVya0HkuwQ24nigXE_GhhVgXyLYqHRPPD_Z_Sft35hOJQiaEZvmhD2oiYbHli2cZ0zH3Rkkvmphh60p2JI3h8g
+

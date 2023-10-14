@@ -10,7 +10,7 @@ Before you begin, ensure you have the following installed:
 
 - Java Development Kit (JDK)
 - Apache Maven
-- MySQL installation with schema named "lab4"
+- MySQL installation with schema named "lab5"
 
 ## Build the Application
 
