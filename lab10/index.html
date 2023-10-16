@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 10</title>
+    <script type="text/javascript" src="./libraries/react.development.js"></script>
+    <script type="text/javascript" src="./libraries/react-dom.development.js"></script>
+    <script type="text/javascript" src="./libraries/babel.min.js"></script>
+</head>
+<body>
+
+<div id="container"></div>
+
+<script type="text/babel">
+
+    class Counter extends React.Component {
+
+        constructor(props) {
+            super(props);
+            this.state = {
+                counter: 0
+            }
+        }
+
+        increase = () => {
+            this.setState({counter: this.state.counter + 1});
+        }
+        decrease = () => {
+            this.setState({counter: this.state.counter - 1});
+        }
+
+        render() {
+            const {counter} = this.state;
+            return (
+                <>
+                    <h2>Counter: {counter}</h2>
+                    <button onClick={this.increase}>+ Increase</button>
+                    <button onClick={this.decrease}>- Decrease</button>
+                </>
+            )
+        }
+    }
+
+    ReactDOM.createRoot(document.getElementById("container")).render(<Counter/>);
+
+</script>
+
+</body>
+
+</html>
